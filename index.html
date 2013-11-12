@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <title>Dropdown-Select</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+     <link href="css/dropdown-select.css" rel="stylesheet">
+     <link href="css/dropdown-page.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Dropdown-Select</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Download</a></li>
+            <li><a href="#about">Check on Github</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase dropdown-container">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Dropdown-Select</h1>
+        <p>Get all the functionality of a select element along with the flexibility and endless customization possibilities offered by <a href="https://github.com/twbs/bootstrap">Bootstrap</a></p>
+        <p><a class="btn btn-primary btn-lg">Download it now! &raquo;</a></p>
+      </div>
+      <p>
+        The goal of Dropdown-Select is simple: merely to extend Bootstrap's dropdown plugin to include all (or at least most) of the functionalities of a <code>&lt;select&gt;</code> element.
+      </p>
+      <p>
+         Why do that? you may be asking yourself. Well, the answer is that, as useful and reliable as they are in forms and the such, select elements are also pretty much impervious to CSS styling (beyond what libraries/frameworks like Bootstrap have already done) or JavaScript manipulation. So it seemed like a good idea to try to add some functionality to Bootstap's dropdown plugin, to make it a suitable and more friendly (for developers, designers and users alike) replacement for good 'ol <code>&lt;select&gt;</code>.
+      </p>
+      <h3>Implementation</h3>
+      <p>
+        In order to use it, you just need to add the script to your head file or (even better)  just before closing the <code>&lt;body&gt;</code> tag.
+      </p>
+
+
+      <pre>
+        &lt;script src="js/dropdown-select.js"&gt;&lt;/script&gt;
+      </pre>
+
+      <p>
+        And then, you can instantiate Bootstrap dropdowns as you usually do, either via <a href="http://getbootstrap.com/javascript/#dropdowns">data attributes or via javascript</a>. Just remember to add the class dropdown-select to the element defined as a  dropdown:
+      </p>
+      
+      <pre>
+         &lt;div class=&quot;dropdown <strong>dropdown-select</strong>&quot;&gt;
+      </pre>
+
+      <p>
+        And then is ready:
+      </p>
+
+      <div class="dropdown dropdown-select">
+        <button type="button" class="btn form-control dropdown-toggle" data-toggle="dropdown">
+          <span class="display">Click me!</span> <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="testList" role="menu" aria-labelledby="dLabel">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Buenos Aires</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Berlin</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Rome</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Lisbon</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Madrid</a></li>
+        </ul>
+      </div> 
+      <p>
+        You can type and search for any option:
+      </p>
+      <div class="dropdown dropdown-select">
+        <button type="button" class="btn form-control dropdown-toggle" data-toggle="dropdown">
+          <span class="display">Click me and type!</span> <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="testList" role="menu" aria-labelledby="dLabel">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Buenos Aires</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Berlin</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Rome</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Lisbon</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Madrid</a></li>
+        </ul>
+      </div>
+      <span class="note">Click the dropdown, type &quot;mad&quot; and see what happens! And then close it down and type &quot;lis&quot;</span>
+      <p>
+        Pick one element of the dropdown to be the one selected by default. For this, you just need to add the <strong>&quot;default&quot;</strong> to the <code>&lt;a&gt;</code> with the desired value:
+      </p>
+      <pre>
+         &lt;ul class=&quot;dropdown-menu&quot; id=&quot;testList&quot; role=&quot;menu&quot; aria-labelledby=&quot;dLabel&quot;&gt;
+            &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; class=&quot;<strong>default</strong>&quot; href=&quot;javascript:void(0)&quot;&gt;Buenos Aires&lt;/a&gt;&lt;/li&gt;
+      </pre>
+
+      <div class="dropdown dropdown-select">
+        <button type="button" class="btn form-control dropdown-toggle" data-toggle="dropdown">
+          <span class="display">Click me!</span> <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="testList" role="menu" aria-labelledby="dLabel">
+          <li role="presentation"><a role="menuitem" class="default" tabindex="-1" href="javascript:void(0)">Buenos Aires</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Berlin</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Rome</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Lisbon</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Madrid</a></li>
+        </ul>
+      </div>
+
+
+      <p>
+        Define groups of options.  For this you need to add the <strong>disabled</strong> and <strong>groupheader</strong> classes to the li that will serve as the title of the group:
+      </p>
+      <pre>
+        &lt;div class=&quot;dropdown dropdown-select&quot;&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn form-control dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+            &lt;span class=&quot;display&quot;&gt;Click me and type!&lt;/span&gt; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+          &lt;/button&gt;
+          &lt;ul class=&quot;dropdown-menu&quot; id=&quot;testList&quot; role=&quot;menu&quot; aria-labelledby=&quot;dLabel&quot;&gt;
+            &lt;li role=&quot;presentation&quot; class=&quot;<strong>disabled</strong> <strong>groupheader</strong>&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;javascript:void(0)&quot;&gt;Buenos Aires&lt;/a&gt;&lt;/li&gt;
+            &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;javascript:void(0)&quot;&gt;Europe&lt;/a&gt;&lt;/li&gt;
+            &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;javascript:void(0)&quot;&gt;Berlin&lt;/a&gt;&lt;/li&gt;
+            &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;javascript:void(0)&quot;&gt;Rome&lt;/a&gt;&lt;/li&gt;
+            &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;javascript:void(0)&quot;&gt;Lisbon&lt;/a&gt;&lt;/li&gt;
+            &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;javascript:void(0)&quot;&gt;Madrid&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+        
+      </pre>
+      <p>Implemented here:</p>
+      <div class="dropdown dropdown-select">
+        <button type="button" class="btn form-control dropdown-toggle" data-toggle="dropdown">
+          <span class="display">Click me!</span> <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="testList" role="menu" aria-labelledby="dLabel">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Buenos Aires</a></li>
+          <li role="presentation" class="disabled groupheader"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Europe</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Berlin</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Rome</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Lisbon</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Madrid</a></li>
+        </ul>
+      </div>
+
+      <p>
+        And you can even use it in forms and validate them, by  adding the <strong>&quot;required&quot;</strong> class to the element:
+      </p>
+      <pre>
+        &lt;div class=&quot;dropdown dropdown-select <strong>required</strong>&quot;&gt;
+        ----Rest of the dropdown code here----
+      </pre>
+      <p>
+        And it works like this:
+      </p>
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <div class="dropdown dropdown-select required" id="validate-me">
+            <button type="button" class="btn form-control dropdown-toggle" data-toggle="dropdown">
+              <span class="display">Choose & submit!</span> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="testList" role="menu" aria-labelledby="dLabel">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Buenos Aires</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Berlin</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Rome</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Lisbon</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Madrid</a></li>
+            </ul>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-default" onsubmit="javascript:void(0)">Submit</button>
+        <div class="below-tooltip"></div>
+      </form>
+      <p>
+        This plugin works on the same browsers as Bootstrap, mayor cross-browser issues with it.
+      </p>
+      <p>
+        Please, use it, fork it or report any bug that you may find.
+      </p>
+    </div> <!-- /container -->
+ 
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="js/dropdown-select.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.js"></script>
+    <script>
+       $(document).ready(function() {
+           $('.form-inline').validate({
+             ignore: [],
+             rules: {
+               'validate-me': {validateDropdown: true}
+             },
+             messages: {
+               'validate-me': 'Hey! Pick one city!'
+             },
+             errorPlacement: function(error, element) {
+               $('#validate-me').append('<div class="custom-tooltip">' + error.text() +'<div class="custom-arrow"></div></div>');
+             }
+           });
+           jQuery.validator.addMethod("validateDropdown", function(value, element) {
+               if(value !== "default") {
+                 return true
+               }
+            });
+       });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+.dropdown-select {
+	width: 160px;
+}
+
+.dropdown-select > ul {
+	top: 93%;
+}
+
+.dropdown-select > button {
+	width: 100%;
+}
+
+.dropdown-select > button, button:hover, button:focus {
+	background-color: white;
+	border-color: #CCCCCC;
+}
+
+.dropdown-select > button > span.display {
+	float: left;
+}
+
+.dropdown-select > button.btn > .caret {
+	position: absolute;
+	top: 46%;
+	right: 10px;
+}
+
+ul.dropdown-menu > li > a.focus {
+    color: white;
+	border-color: #CCCCCC;
+	background-color: #428bca;
+}
+
+ul.dropdown-menu > li.disabled > a {
+	color: black;
+	font-weight: bolder;
+
+}
+
+ul.dropdown-menu > li.groupheader > a {
+	margin-left: -6px;
+}
+
+ul.dropdown-menu > li.groupheader > a:hover {
+	cursor: default;
+	color: black;
+}
