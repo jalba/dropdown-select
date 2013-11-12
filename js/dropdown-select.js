@@ -62,7 +62,7 @@ $(function($) {
 
             changeDisplay: function(text) {
                 var t
-                text) ? t = text : t = $(this.clickedMenuItem).html()
+                if(text) ? t = text : t = $(this.clickedMenuItem).html()
                 $(this.dropdownToggle).children('.display').html(t)
                 this.required(t)
             },
