@@ -23,7 +23,7 @@
 if (!jQuery) { throw new Error("dropdown-select requires jQuery") }
 if (typeof $().dropdown !== 'function') {throw new Error("dropdown-select requires Bootstrap dropdown plugin")}
          
-$(function($) {
+(function($) {
              
     if(!$('.dropdown-select').length) return
         var dropdownSelect = {
@@ -150,7 +150,7 @@ dropdownSelect.init()
 if (typeof String.prototype.startsWith != 'function') {
     String.prototype.startsWith = function (str){
         return this.slice(0, str.length) == str;
-    };
+    }
 }
 
-})
+}(window.jQuery));
